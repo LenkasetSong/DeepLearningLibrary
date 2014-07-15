@@ -1,0 +1,10 @@
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\bin\Debug\Mnist.exe.config
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\bin\Debug\Mnist.exe
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\bin\Debug\Mnist.pdb
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\bin\Debug\DeepLearningLibrary.dll
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\bin\Debug\MathNet.Numerics.dll
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\bin\Debug\DeepLearningLibrary.pdb
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\bin\Debug\MathNet.Numerics.xml
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\obj\Debug\Mnist.csprojResolveAssemblyReference.cache
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\obj\Debug\Mnist.exe
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\obj\Debug\Mnist.pdb

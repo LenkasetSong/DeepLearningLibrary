@@ -1,0 +1,9 @@
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\obj\Debug\DeepLearningLibrary.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\bin\Debug\DeepLearningLibrary.Tests.dll
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\bin\Debug\DeepLearningLibrary.Tests.pdb
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\bin\Debug\DeepLearningLibrary.dll
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\bin\Debug\MathNet.Numerics.dll
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\bin\Debug\DeepLearningLibrary.pdb
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\bin\Debug\MathNet.Numerics.xml
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\obj\Debug\DeepLearningLibrary.Tests.dll
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\DeepLearningLibrary.Tests\obj\Debug\DeepLearningLibrary.Tests.pdb
