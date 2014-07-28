@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
-using DeepLearningLibrary;
-
-using MathNet.Numerics.LinearAlgebra;
-using MathNet.Numerics.LinearAlgebra.Double;
+using DeepLearningLibrary.Networks;
+using DeepLearningLibrary.Utility.ActivationFunction;
+using DeepLearningLibrary.Utility.Learning;
 
 namespace Mnist
 {
@@ -15,141 +14,86 @@ namespace Mnist
     {
         static void Main()
         {
-            Console.WriteLine("Start");
-            FileStream ifsLabels =
-              new FileStream(@"F:\Data\train-labels.idx1-ubyte",
-                 FileMode.Open); // test labels
-                FileStream ifsImages =
-                 new FileStream(@"F:\Data\train-images.idx3-ubyte",
-                 FileMode.Open); // test images
+            double[][] inputs = new double[8][];
+            double[][] outputs = new double[8][];
 
-                BinaryReader brLabels =
-                 new BinaryReader(ifsLabels);
-                BinaryReader brImages =
-                 new BinaryReader(ifsImages);
+            for (int i = 0; i < 8; i++)
+            {
+                inputs[i] = new double[2];
+                outputs[i] = new double[1];
+            }
 
-                int magic1 = brImages.ReadInt32(); // discard
-                int numImages = brImages.ReadInt32();
-                int numRows = brImages.ReadInt32();
-                int numCols = brImages.ReadInt32();
+            inputs[0][0] = 0;
+            inputs[0][1] = 1;
 
-                int magic2 = brLabels.ReadInt32();
-                int numLabels = brLabels.ReadInt32();
+            outputs[0][0] = 0;
 
-                Matrix<double> input = new SparseMatrix(60000, 28*28);
+            inputs[1][0] = 1;
+            inputs[1][1] = 1;
 
-                Matrix<double> output = new SparseMatrix(60000, 10);
+            outputs[1][0] = 0;
 
-                int[] numlayers = { 28 * 28, 200, 10 };
+            inputs[2][0] = 3;
+            inputs[2][1] = 4;
 
-                NeuralNetwork nn = new NeuralNetwork(numlayers, Math.Tanh);
+            outputs[2][0] = 0;
 
-                for(int di = 0; di < 60000; di++)
-                {
-                    double[] image = new double[28 * 28];
-                    double[] label = new double[10];
+            inputs[3][0] = 1;
+            inputs[3][1] = 7;
 
-                    for(int i = 0; i < 28; i++)
-                    {
-                        for(int j = 0; j < 28; j++)
-                        {
-                            image[i * 28 + j] = brImages.ReadByte();
-                        }
-                    }
+            outputs[3][0] = 1;
 
-                    int ind = brLabels.ReadByte();
+            inputs[4][0] = 2;
+            inputs[4][1] = 11;
 
-                    label[ind] = 1;
+            outputs[4][0] = 1;
 
-                    input.SetRow(di, image);
-                    output.SetRow(di, label);
+            inputs[5][0] = 4;
+            inputs[5][1] = 10;
 
-                    Console.WriteLine(di);
-                }
+            outputs[5][0] = 1;
 
+            inputs[6][0] = 4;
+            inputs[6][1] = 5;
 
-                for (int dj = 0; dj < 1000; dj++)
-                {
-                    for (int di = 0; di < 60000; di++)
-                    {
-                        nn.train(input.SubMatrix(di, 1, 0, 28 * 28), output.SubMatrix(di, 1, 0, 10));
-                    }
-                    nn.applyDerivative(numImages, 1, 0.01);
-                }
-               
-                brImages.Close();
-                brLabels.Close();
+            outputs[6][0] = 0;
 
-                ifsLabels =
-              new FileStream(@"F:\Data\t10k-labels.idx1-ubyte",
-                 FileMode.Open); // test labels
-                ifsImages =
-                 new FileStream(@"F:\Data\t10k-images.idx3-ubyte",
-                 FileMode.Open);
+            inputs[7][0] = 5;
+            inputs[7][1] = 12;
 
-                brLabels =
-                     new BinaryReader(ifsLabels);
-                brImages =
-                 new BinaryReader(ifsImages);
+            outputs[7][0] = 1;
 
-                magic1 = brImages.ReadInt32(); // discard
-                numImages = brImages.ReadInt32();
-                numRows = brImages.ReadInt32();
-                numCols = brImages.ReadInt32();
+            SigmoidFunction function = new SigmoidFunction(0.01);
 
-                magic2 = brLabels.ReadInt32();
-                numLabels = brLabels.ReadInt32();
+            ActivationNetwork network = new ActivationNetwork(function, 2, 20, 1);
 
-                input = new SparseMatrix(1, 28 * 28);
-                output = new SparseMatrix(1, 10);
+            BackPropagationLearning bp = new BackPropagationLearning(network);
 
-                int count = 0;
+            bp.Momentum = 0.5;
+            bp.LearningRate = 1;
 
-                for (int di = 0; di < 10000; di++)
-                {
-                    double[] image = new double[28 * 28];
-                    double[] label = new double[10];
+            double error = 1;
+            double[] test = {1,3.5};
 
-                    for (int i = 0; i < 28; i++)
-                    {
-                        for (int j = 0; j < 28; j++)
-                        {
-                            image[i * 28 + j] = brImages.ReadByte();
-                        }
-                    }
+            while(error > 0.05)
+            {
+                error = bp.RunEpoch(inputs, outputs);
 
-                    int ind = brLabels.ReadByte();
+                Console.WriteLine(error);
+            }
 
-                    label[ind] = 1;
+            double prob = network.Compute(test)[0];
 
-                    input.SetRow(0, image);
-                    output.SetRow(0, label);
+            Console.WriteLine(prob);
 
-                    Matrix<double> tmp_out = nn.forwardFeed(input);
-
-                    double max = Double.MinValue;
-                    int dl = 0;
-                    for (int dj = 0; dj < tmp_out.ColumnCount; dj++)
-                    {
-                        if(max < tmp_out[0, dj])
-                        {
-                            max = tmp_out[0, dj];
-                            dl = dj;
-                        }
-                    }
-
-                    if (ind == dl)
-                        count++;
-
-                    Console.WriteLine(di);
-                }
-                
-                double rate =  count / 10000;
-
-                Console.WriteLine(rate);
-                
-                Console.WriteLine("End");
-                Console.ReadLine();
+            if(prob > 0.5)
+            {
+                Console.WriteLine(1);
+            }
+            else
+            {
+                Console.WriteLine(0);
+            }
         } 
     } 
 }

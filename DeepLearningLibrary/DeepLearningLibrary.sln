@@ -3,9 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepLearningLibrary", "DeepLearningLibrary\DeepLearningLibrary.csproj", "{35475553-4DD1-4366-AFFE-4E503B5DED2E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepLearningLibrary.Tests", "DeepLearningLibrary.Tests\DeepLearningLibrary.Tests.csproj", "{1E8408EE-2AB7-4A26-984C-4482B97273E1}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neuron", "DeepLearningLibrary\Neuron.csproj", "{35475553-4DD1-4366-AFFE-4E503B5DED2E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mnist", "Mnist\Mnist.csproj", "{8D6FCFFB-BA08-49F2-BBCC-BB96DEA4EE64}"
 EndProject
@@ -19,10 +17,6 @@ Global
 		{35475553-4DD1-4366-AFFE-4E503B5DED2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{35475553-4DD1-4366-AFFE-4E503B5DED2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{35475553-4DD1-4366-AFFE-4E503B5DED2E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{1E8408EE-2AB7-4A26-984C-4482B97273E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1E8408EE-2AB7-4A26-984C-4482B97273E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1E8408EE-2AB7-4A26-984C-4482B97273E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1E8408EE-2AB7-4A26-984C-4482B97273E1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{8D6FCFFB-BA08-49F2-BBCC-BB96DEA4EE64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8D6FCFFB-BA08-49F2-BBCC-BB96DEA4EE64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D6FCFFB-BA08-49F2-BBCC-BB96DEA4EE64}.Release|Any CPU.ActiveCfg = Release|Any CPU

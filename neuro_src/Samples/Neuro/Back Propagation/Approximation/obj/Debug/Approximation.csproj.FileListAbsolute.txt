@@ -1,0 +1,1 @@
+C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\neuro_src\Samples\Neuro\Back Propagation\Approximation\bin\Debug\Approximation.exe.config

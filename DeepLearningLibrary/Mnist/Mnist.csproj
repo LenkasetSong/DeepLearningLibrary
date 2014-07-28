@@ -54,9 +54,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DeepLearningLibrary\DeepLearningLibrary.csproj">
+    <ProjectReference Include="..\DeepLearningLibrary\Neuron.csproj">
       <Project>{35475553-4dd1-4366-affe-4e503b5ded2e}</Project>
-      <Name>DeepLearningLibrary</Name>
+      <Name>Neuron</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
