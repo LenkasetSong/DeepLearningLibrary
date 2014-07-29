@@ -23,7 +23,7 @@
             get { return neuronsCount; }
         }
 
-        public double[] Ouput
+        public double[] Output
         {
             get { return output; }
         }

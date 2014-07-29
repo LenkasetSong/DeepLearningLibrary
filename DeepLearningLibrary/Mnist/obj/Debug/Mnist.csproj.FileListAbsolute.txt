@@ -8,3 +8,6 @@ C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\
 C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\obj\Debug\Mnist.csprojResolveAssemblyReference.cache
 C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\obj\Debug\Mnist.exe
 C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\obj\Debug\Mnist.pdb
+J:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\Mnist.exe.config
+J:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\obj\Debug\Mnist.exe
+J:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\obj\Debug\Mnist.pdb
