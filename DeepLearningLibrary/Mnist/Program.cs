@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 using DeepLearningLibrary.Networks;
+using DeepLearningLibrary.Layers;
 using DeepLearningLibrary.Utility.ActivationFunction;
 using DeepLearningLibrary.Utility.Learning;
 
@@ -14,85 +15,42 @@ namespace Mnist
     {
         static void Main()
         {
-            double[][] inputs = new double[8][];
-            double[][] outputs = new double[8][];
+            double[][] inputs = new double[4][];
 
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < 4; i++)
             {
                 inputs[i] = new double[2];
-                outputs[i] = new double[1];
             }
 
-            inputs[0][0] = 0;
-            inputs[0][1] = 1;
+            inputs[0][0] = 1;
+            inputs[0][1] = 0;
 
-            outputs[0][0] = 0;
-
-            inputs[1][0] = 1;
+            inputs[1][0] = 0;
             inputs[1][1] = 1;
-
-            outputs[1][0] = 0;
-
-            inputs[2][0] = 3;
-            inputs[2][1] = 4;
-
-            outputs[2][0] = 0;
-
-            inputs[3][0] = 1;
-            inputs[3][1] = 7;
-
-            outputs[3][0] = 1;
-
-            inputs[4][0] = 2;
-            inputs[4][1] = 11;
-
-            outputs[4][0] = 1;
-
-            inputs[5][0] = 4;
-            inputs[5][1] = 10;
-
-            outputs[5][0] = 1;
-
-            inputs[6][0] = 4;
-            inputs[6][1] = 5;
-
-            outputs[6][0] = 0;
-
-            inputs[7][0] = 5;
-            inputs[7][1] = 12;
-
-            outputs[7][0] = 1;
 
             SigmoidFunction function = new SigmoidFunction(0.01);
 
-            ActivationNetwork network = new ActivationNetwork(function, 2, 20, 1);
+            RBMLayer rbm = new RBMLayer(3, 3, function);
 
-            BackPropagationLearning bp = new BackPropagationLearning(network);
+            RBMLearning bp = new RBMLearning(rbm);
+
+            bp.K = 10;
 
             bp.Momentum = 0.5;
             bp.LearningRate = 1;
 
-            double error = 1;
-            double[] test = {1,3.5};
+            double[][] test = inputs;
 
-            while(error > 0.05)
+            for(int i = 0; i < 100000; i++)
             {
-                error = bp.RunEpoch(inputs, outputs);
-
-                Console.WriteLine(error);
+                bp.RunEpoch(inputs);
             }
 
-            double prob = network.Compute(test)[0];
-
-            Console.WriteLine(prob);
-
-            if(prob > 0.5)
+            for (int i = 0; i < test.Length; i++)
             {
-                Console.WriteLine(1);
-            }
-            else
-            {
-                Console.WriteLine(0);
+                double[] output = rbm.ComputeDown(inputs[i]);
+
+                Console.WriteLine("{0}, {1}, {2}", output[0], output[1], output[2]);
             }
         } 
     } 

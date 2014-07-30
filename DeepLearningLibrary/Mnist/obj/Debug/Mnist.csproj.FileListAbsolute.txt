@@ -11,3 +11,13 @@ C:\Users\Junzhe\Documents\Visual Studio 2013\Projects\DeepLearningLibrary\Mnist\
 J:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\Mnist.exe.config
 J:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\obj\Debug\Mnist.exe
 J:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\obj\Debug\Mnist.pdb
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\Mnist.exe.config
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\obj\Debug\Mnist.exe
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\obj\Debug\Mnist.pdb
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\Mnist.exe
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\Mnist.pdb
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\DeepLearningLibrary.dll
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\MathNet.Numerics.dll
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\DeepLearningLibrary.pdb
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\bin\Debug\MathNet.Numerics.xml
+E:\Github\DeepLearningLibrary\DeepLearningLibrary\Mnist\obj\Debug\Mnist.csprojResolveAssemblyReference.cache

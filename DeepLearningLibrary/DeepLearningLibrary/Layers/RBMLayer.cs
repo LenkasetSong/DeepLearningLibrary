@@ -45,6 +45,8 @@
         {
             neurons_ = new Neuron[inputsCount];
 
+            output_ = new double[inputsCount];
+
             for(int i = 0; i < inputsCount; i++)
             {
                 neurons_[i] = new ActivationNeuron(neuronsCount, function);
