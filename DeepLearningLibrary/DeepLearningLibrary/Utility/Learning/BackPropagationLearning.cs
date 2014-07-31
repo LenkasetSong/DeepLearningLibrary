@@ -2,7 +2,7 @@
 {
     using System;
     using DeepLearningLibrary.Networks;
-    using DeepLearningLibrary.Neurons;
+    using DeepLearningLibrary.Units;
     using DeepLearningLibrary.Layers;
     using DeepLearningLibrary.Utility.ActivationFunction;
 

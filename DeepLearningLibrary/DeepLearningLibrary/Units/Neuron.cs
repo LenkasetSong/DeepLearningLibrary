@@ -1,11 +1,11 @@
-﻿namespace DeepLearningLibrary.Neurons
+﻿namespace DeepLearningLibrary.Units
 {
     using System;
     using DeepLearningLibrary.Utility.Common;
     using MathNet.Numerics.LinearAlgebra;
     using MathNet.Numerics.LinearAlgebra.Double;
 
-    public abstract class Neuron
+    public abstract class Neuron : Unit
     {
         protected int inputsCount = 0;
 
@@ -80,7 +80,5 @@
                 weights[i] = rand.NextDouble() * d + randRange.Min;
             }
         }
-
-        public abstract double Compute(double[] input);
     }
 }

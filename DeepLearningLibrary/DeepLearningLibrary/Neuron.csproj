@@ -34,6 +34,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\MathNet.Numerics.3.0.2\lib\net40\MathNet.Numerics.dll</HintPath>
     </Reference>
+    <Reference Include="Optimization.Framework">
+      <HintPath>..\packages\Optimization.Framework.0.3.1244.0\lib\net40\Optimization.Framework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Numerics" />
@@ -45,6 +48,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Layers\RBMLayer.cs" />
+    <Compile Include="Layers\SoftmaxLayer.cs" />
+    <Compile Include="Units\SoftmaxUnit.cs" />
+    <Compile Include="Units\Unit.cs" />
     <Compile Include="Utility\Common\DoubleRange.cs" />
     <Compile Include="Utility\Common\Range.cs" />
     <Compile Include="Layers\ActivationLayer.cs" />
@@ -56,14 +62,17 @@
     <Compile Include="Utility\Learning\DBNLearning.cs" />
     <Compile Include="Utility\Learning\ISupervisedLearning.cs" />
     <Compile Include="Utility\Learning\IUnsupervisedLearning.cs" />
-    <Compile Include="Neurons\ActivationNeuron.cs" />
-    <Compile Include="Neurons\Neuron.cs" />
+    <Compile Include="Units\ActivationNeuron.cs" />
+    <Compile Include="Units\Neuron.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utility\ActivationFunction\IActivationFunction.cs" />
     <Compile Include="Utility\Learning\RBMLearning.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Networks\DBNNetwork.cs" />
+    <None Include="OptimizationConfigSection.csd.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

@@ -2,7 +2,7 @@
 {
     using System;
     using System.Linq;
-    using DeepLearningLibrary.Neurons;
+    using DeepLearningLibrary.Units;
     using DeepLearningLibrary.Utility.ActivationFunction;
 
     public class ActivationLayer : Layer

@@ -1,7 +1,7 @@
 ﻿namespace DeepLearningLibrary.Layers
 {
     using System;
-    using DeepLearningLibrary.Neurons;
+    using DeepLearningLibrary.Units;
 
     public abstract class Layer
     {

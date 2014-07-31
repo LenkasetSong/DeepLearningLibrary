@@ -1,4 +1,4 @@
-﻿namespace DeepLearningLibrary.Neurons
+﻿namespace DeepLearningLibrary.Units
 {
     using System;
     using DeepLearningLibrary.Utility.ActivationFunction;
