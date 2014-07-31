@@ -53,6 +53,7 @@
     <Compile Include="Networks\Network.cs" />
     <Compile Include="Utility\ActivationFunction\SigmoidFunction.cs" />
     <Compile Include="Utility\Learning\BackPropagationLearning.cs" />
+    <Compile Include="Utility\Learning\DBNLearning.cs" />
     <Compile Include="Utility\Learning\ISupervisedLearning.cs" />
     <Compile Include="Utility\Learning\IUnsupervisedLearning.cs" />
     <Compile Include="Neurons\ActivationNeuron.cs" />
@@ -62,6 +63,7 @@
     <Compile Include="Utility\Learning\RBMLearning.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Networks\DBNNetwork.cs" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup />

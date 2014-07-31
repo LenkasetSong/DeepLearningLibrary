@@ -82,6 +82,7 @@
             // run learning procedure for all samples
             for (int i = 0, n = input.Length; i < n; i++)
             {
+                Console.WriteLine(i);
                 error += this.Run(input[i]);
             }
 
