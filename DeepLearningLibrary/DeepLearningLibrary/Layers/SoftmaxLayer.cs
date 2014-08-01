@@ -7,5 +7,6 @@
 
     public class SoftmaxLayer : Layer
     {
+        private double[] thetas = null;
     }
 }

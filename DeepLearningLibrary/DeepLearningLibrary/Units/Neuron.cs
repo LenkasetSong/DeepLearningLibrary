@@ -71,7 +71,7 @@
             this.Randomize();
         }
 
-        public virtual void Randomize()
+        public override virtual void Randomize()
         {
             double d = randRange.Length;
             
